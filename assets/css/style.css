@@ -1,0 +1,17 @@
+body {
+
+}
+
+.jumbotron-fluid {
+    padding: 5px;
+    z-index: 99;
+}
+
+#input-gifs {
+    width: 100%;
+}
+.card-footer {
+    margin-top: 5px;
+    text-align: center;
+    z-index: -99;
+}
