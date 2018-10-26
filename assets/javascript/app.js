@@ -3,15 +3,15 @@ console.log("hi TAm!");
 $(document).ready(function () {
 
     // array of strings, each one related to a MOVIES topic 
-    var topics = ["to all the boy i've love before", "carol", "below her mouth", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
+    var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
 
     // Display gifs show
 
     function gifsMovieShow() {
         var topicShow = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            topicShow + "&api_key=dc6zaTOxFJmzC&limit=10";
-
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topicShow + "&api_key=n1Hc7vH2Vax0hwe4ECg3efKyS2L4Gs0f&limit=10";
+        
+        
         // Performing an AJAX request with the queryURL
         $.ajax({
             url: queryURL,
@@ -20,8 +20,7 @@ $(document).ready(function () {
         }).then(function(response) {
             $("#gifs-view").empty();
             var results = response.data;
-            // console.log(results);
-
+            console.log(response);
             //  
             for (var i = 0; i < results.length; i++) {
                 var topicDiv = $("<div>");
@@ -49,7 +48,7 @@ $(document).ready(function () {
             // On click funtion for Images animate or still
             $(".topic-img").on("click", function() {
                 var state = $(this).attr("data-state");
-                // console.log(state, "state");
+                console.log(state, "state");
 
                 // If the clicked image's state is still, update its src attribute to what its data-animate value is.
                 // Then, set the image's data-state to animate
@@ -79,7 +78,7 @@ $(document).ready(function () {
             $("#topic-buttons").append(btn);
         }
     }
-    // This function handles events where one button is clicked
+    // This function handles events where add button is clicked
     $("#add-topic").on("click", function(event) {
         event.preventDefault();
         var newTopic = $("#topic-input").val().trim();
@@ -88,7 +87,7 @@ $(document).ready(function () {
     });
 
     // Adding click event to all elements
-    $(document).on("click", ".topic-gif", gifsMovieShow);
+    $(".topic-gif").on("click", gifsMovieShow());
 
     //Button initial list of movies.
     renderButtons();
