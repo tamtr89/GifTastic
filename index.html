@@ -18,7 +18,7 @@
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
             <h1 class="display-4">GifTastic</h1>
-            <p class="lead">Let's finding the perfect GIF by hunting through my page with just a clicks. </p>
+            <p class="lead">Let's finding the perfect Movie GIF by hunting through my page with just a clicks. </p>
         </div>
         <div class="row">
             <div class="col-lg-3">
@@ -26,12 +26,12 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="gifs-search">Add an animal</label>
-                                <input type="text" id="gif-input" placeholder="Gifs of your choice">
+                                <label for="gifs-search">Add a Movie Show</label>
+                                <input type="text" id="topic-input" placeholder="Movie of your choice">
+                                <!-- button triggers new anime to be added -->
+                                <input type="submit" id="add-topic" class="btn btn-outline-warning btn-sm" value="Add a movie!">
 
-                                <input id="add-gif" type="submit" class="btn btn-outline-warning btn-sm" value="Add a GIF!">
-
-                                <div id="gif-btn-view"></div>
+                                <div id="topic-buttons"></div>
                             </div>
                         </form>
                     </div>
@@ -40,8 +40,8 @@
             <div class="col-lg-9">
                 <div class="card">
                     <div class="card-body">
-                       <h3> GHIPHY API Images Display</h3>
-                        
+                        <h3> GHIPHY API Images Display</h3>
+
                         <div id="gifs-view"></div>
                     </div>
                 </div>
