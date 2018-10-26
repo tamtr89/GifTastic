@@ -1,5 +1,7 @@
 body {
-
+/* background-image: url("../images/gifbackground.gif");
+background-repeat: no-repeat;
+background-size: cover; */
 }
 
 .jumbotron-fluid {
@@ -7,11 +9,29 @@ body {
     z-index: 99;
 }
 
-#input-gifs {
+#gif-input {
     width: 100%;
+    
 }
+
+.gifs,
+#add-gif {
+    margin: 2px;
+
+}
+
+.col-lg-9 {
+    padding-left: 0;
+}
+
+.view {
+  display: inline-block;
+  margin: 5px;
+}
+
 .card-footer {
     margin-top: 5px;
     text-align: center;
     z-index: -99;
+    width: 100%;
 }
