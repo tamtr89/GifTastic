@@ -10,7 +10,7 @@ $(document).ready(function () {
     function gifsMovieShow() {
         var topicShow = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        topicShow + "&api_key=dc6zaTOxFJmzC&limit=10";
+            topicShow + "&api_key=dc6zaTOxFJmzC&limit=10";
 
         // Performing an AJAX request with the queryURL
         $.ajax({
@@ -25,7 +25,7 @@ $(document).ready(function () {
             //  
             for (var i = 0; i < results.length; i++) {
                 var topicDiv = $("<div>");
-               topicDiv.addClass("movie-gif");
+                topicDiv.addClass("movie-gif");
 
                 // Under every gif, display its rating (PG, G, so on).
                 var rating = results[i].rating;
@@ -41,8 +41,8 @@ $(document).ready(function () {
                 topicImage.attr("data-state", "still");
 
                 //Display on page
-               topicDiv.append(p);
-               topicDiv.append(topicImage);
+                topicDiv.append(p);
+                topicDiv.append(topicImage);
                 $("#gifs-view").prepend(topicDiv);
             }
 

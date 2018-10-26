@@ -14,17 +14,16 @@ background-size: cover; */
     
 }
 
-.gifs,
-#add-gif {
+.topic-gif,
+#add-topic {
     margin: 2px;
-
 }
 
 .col-lg-9 {
     padding-left: 0;
 }
 
-.view {
+.topic-img {
   display: inline-block;
   margin: 5px;
 }
