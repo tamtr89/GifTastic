@@ -1,16 +1,17 @@
 console.log("hi TAm!");
 
-$(document).ready(function () {
+$(document).ready(function(){
 
     // array of strings, each one related to a MOVIES topic 
     var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
 
     // Display gifs show
-
     function gifsMovieShow() {
-        var topicShow = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topicShow + "&api_key=n1Hc7vH2Vax0hwe4ECg3efKyS2L4Gs0f&limit=10";
         
+        var topicShow = $(this).attr("data-name");
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        topicShow + "&api_key=dc6zaTOxFJmzC&limit=10";
+        console.log(topicShow, "TTTTTTTTTTTTTTTT");
         
         // Performing an AJAX request with the queryURL
         $.ajax({
@@ -20,7 +21,7 @@ $(document).ready(function () {
         }).then(function(response) {
             $("#gifs-view").empty();
             var results = response.data;
-            console.log(response);
+            console.log("response:::", results);
             //  
             for (var i = 0; i < results.length; i++) {
                 var topicDiv = $("<div>");
@@ -28,7 +29,7 @@ $(document).ready(function () {
 
                 // Under every gif, display its rating (PG, G, so on).
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating);
+                var p = $("<h4>").text("Rating: " + rating);
 
                 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
