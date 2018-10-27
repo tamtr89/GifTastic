@@ -1,22 +1,22 @@
 // console.log("hi TAm!");
 $(document).ready(function () {
-    // var topics = "";
-    // var btn;
-    // var newTopic = "";
+    var topics = "";
+    var btn;
+    var newTopic = "";
 
     // array of strings, each one related to a MOVIES topic 
-   var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
+    topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
 
     // Function for displaying movie data
-    function renderButtons(arrayToUse, classToAdd, areaToAddTo) {
+    function renderButtons(arrayToUse, classToAdd, areaToAddTo ) {
         $(areaToAddTo).empty();
 
         // using a loop that appends a button for each string in the array.
         for (var i = 0; i < arrayToUse.length; i++) {
-           var btn = $("<button>");
+            btn = $("<button>");
             // class for buttons
             btn.addClass(classToAdd);
-            btn.attr("data-type", arrayToUse[i]);
+            btn.attr("data-name", arrayToUse[i]);
             btn.text(arrayToUse[i]);
             $(areaToAddTo).append(btn);
         }
@@ -28,11 +28,11 @@ $(document).ready(function () {
         $(".topic-gif").removeClass("active");
         $(this).addClass("active");
 
-        var topicShow = $(this).attr("data-type");
+        var topicShow = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             topicShow + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-        // console.log(this, "gifMovieShow call");
+        console.log(this, "gifMovieShow call");
 
         // Performing an AJAX request with the queryURL
         $.ajax({
@@ -41,7 +41,7 @@ $(document).ready(function () {
             
         }).then(function (response) {
             var results = response.data;
-            console.log("my ajax response", results);
+            console.log("response:::", results);
             //  
             for (var i = 0; i < results.length; i++) {
                 var topicDiv = $("<div>");
@@ -89,9 +89,9 @@ $(document).ready(function () {
     // This function handles events where add button is clicked
     $("#add-topic").on("click", function (event) {
         event.preventDefault();
-       var newTopic = $("#topic-input").val().trim();
+        newTopic = $("#topic-input").val().trim();
         
-        topics.push(newTopic);
+        renderButtons.push(newTopic);
         renderButtons(topics, "topic-gif", "#topic-buttons");
 
     });
