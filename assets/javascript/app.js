@@ -1,6 +1,6 @@
 console.log("hi TAm!");
 
-$(document).ready(function(){
+
 
     // array of strings, each one related to a MOVIES topic 
     var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
@@ -88,8 +88,7 @@ $(document).ready(function(){
     });
 
     // Adding click event to all elements
-    $(".topic-gif").on("click", gifsMovieShow());
+    $(document).on("click", ".topic-gif", gifsMovieShow);
 
     //Button initial list of movies.
     renderButtons();
-});
