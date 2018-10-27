@@ -1,7 +1,5 @@
 console.log("hi TAm!");
 
-
-
     // array of strings, each one related to a MOVIES topic 
     var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
 
