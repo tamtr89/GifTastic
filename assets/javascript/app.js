@@ -7,6 +7,8 @@ console.log("hi TAm!");
 
     // Display gifs show
     function gifsMovieShow() {
+
+        event.preventDefault();
         
         var topicShow = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
