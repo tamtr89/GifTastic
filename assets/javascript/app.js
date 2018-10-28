@@ -78,7 +78,7 @@ console.log("hi TAm!");
         for (var i = 0; i < topics.length; i++) {
             var btn = $("<button>");
             // class for buttons
-            btn.addClass("topic-gif");
+            btn.addClass("gif-btn");
             btn.attr("data-name", topics[i]);
             btn.text(topics[i]);
             $("#topic-buttons").append(btn);
@@ -93,7 +93,7 @@ console.log("hi TAm!");
     });
 
     // Adding click event to all elements
-    $(document).on("click", ".topic-gif", gifsMovieShow);
+    $(document).on("click", ".gif-btn", gifsMovieShow);
 
     //Button initial list of movies.
     renderButtons();

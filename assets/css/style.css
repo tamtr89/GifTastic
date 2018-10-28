@@ -13,7 +13,7 @@ background-size: cover;
     text-align: left;
     padding: 0;
     z-index: 99;
-    font-family: fantasy;
+    font-family: 'Monoton', cursive;
     color: aliceblue;
 }
 
@@ -24,8 +24,22 @@ h5, p {
     padding: 0%;
 }
 
-label {
+.lead {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+#add-title {
     color: aliceblue;
+    font-family: 'Rancho', cursive;
+    font-size: 1.4rem;
+}
+
+.gif-btn {
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-weight: bold;
+    background: rgb(0, 255, 170);
+    color: black;
+
 }
 
 #topic-input {
@@ -39,7 +53,7 @@ label {
     margin: 3px;
 }
 
-.topic-gif,
+.gif-btn,
 #add-topic {
     margin: 2px;
 }
