@@ -1,9 +1,6 @@
 console.log("hi TAm!");
-
-
-
     // array of strings, each one related to a MOVIES topic 
-    var topics = ["to all the boy i've love before", "carol", "the conjuring", "the witch", "hercules", "friends", "the l world", "scream", "coco", "the avengers"];
+    var topics = ["to all the boy i've love before", "carol", "the conjuring", "the witch", "hercules", "friends", "the l world", "rush hour", "coco", "the avengers"];
 
     // Display gifs show
     function gifsMovieShow() {
@@ -29,12 +26,6 @@ console.log("hi TAm!");
                 var topicDiv = $("<div>");
                 topicDiv.addClass("movie-gif");
 
-                // Under every gif, display its rating (PG, G, so on).
-                var rating = results[i].rating;
-                var pOne = $("<h5>").text("Rating: " + rating);
-                var source = results[i].source_tld;
-                var pTwo = $("<p>").text("Source: " + source);
-
                 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
                 var topicImage = $("<img>");
@@ -44,10 +35,16 @@ console.log("hi TAm!");
                 topicImage.attr("data-animate", results[i].images.fixed_height.url);
                 topicImage.attr("data-state", "still");
 
-                //Display on page
-                topicDiv.append(pOne, pTwo);
+                // Under every gif, display its rating (PG, G, so on).
+                var rating = results[i].rating;
+                var pOne = $("<h5>").text("Rating: " + rating);
+                var source = results[i].source_tld;
+                var pTwo = $("<p>").text("Source: " + source);
+
                 // topicDiv.append(pTwo);
                 topicDiv.append(topicImage);
+                //Display on page
+                topicDiv.append(pOne, pTwo);
                 $("#gifs-view").prepend(topicDiv);
             }
 
