@@ -3,7 +3,7 @@ console.log("hi TAm!");
 
 
     // array of strings, each one related to a MOVIES topic 
-    var topics = ["to all the boy i've love before", "carol", "the conjuring", "black panther", "the witch", "hercules", "friends", "the l world", "scream", "coco"];
+    var topics = ["to all the boy i've love before", "carol", "the conjuring", "the witch", "hercules", "friends", "the l world", "scream", "coco", "the avengers"];
 
     // Display gifs show
     function gifsMovieShow() {
@@ -31,7 +31,9 @@ console.log("hi TAm!");
 
                 // Under every gif, display its rating (PG, G, so on).
                 var rating = results[i].rating;
-                var p = $("<h4>").text("Rating: " + rating);
+                var pOne = $("<h5>").text("Rating: " + rating);
+                var source = results[i].source_tld;
+                var pTwo = $("<p>").text("Source: " + source);
 
                 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
@@ -43,7 +45,8 @@ console.log("hi TAm!");
                 topicImage.attr("data-state", "still");
 
                 //Display on page
-                topicDiv.append(p);
+                topicDiv.append(pOne, pTwo);
+                // topicDiv.append(pTwo);
                 topicDiv.append(topicImage);
                 $("#gifs-view").prepend(topicDiv);
             }

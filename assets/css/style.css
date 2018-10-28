@@ -1,17 +1,42 @@
 body {
-/* background-image: url("../images/gifbackground.gif");
-background-repeat: no-repeat;
-background-size: cover; */
+background-image: url("../images/gifbackground.gif");
+background-size: cover;
+}
+
+#gifs-view {
+    background-image: url("..//images/gifcontainbackground.jpg");
+    background-size: cover;
 }
 
 .jumbotron-fluid {
-    padding: 5px;
+    background-color: black;
+    text-align: left;
+    padding: 0;
     z-index: 99;
+    font-family: fantasy;
+    color: aliceblue;
 }
 
-#gif-input {
+.lead, 
+h5, p {
+    color: aliceblue;
+    text-align: center;
+    padding: 0%;
+}
+
+label {
+    color: aliceblue;
+}
+
+#topic-input {
     width: 100%;
-    
+}
+
+.movie-gif {
+    display: inline-block;
+   background: rgba(0, 0, 0, 0.452);
+    border: 1px solid black;
+    margin: 3px;
 }
 
 .topic-gif,
@@ -23,12 +48,10 @@ background-size: cover; */
     padding-left: 0;
 }
 
-.topic-img {
-  display: inline-block;
-  margin: 5px;
-}
 
 .card-footer {
+    background-image: url("../images/rubiklive.gif");
+    background-size: 10%;
     margin-top: 5px;
     text-align: center;
     z-index: -99;
