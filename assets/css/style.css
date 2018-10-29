@@ -58,8 +58,6 @@ font-family: 'Encode Sans Semi Condensed', sans-serif;
 }
 
 /* Gif Display Area */
-.movie-gif {
-}
 
 .topic-img, 
 .movie-gif {
@@ -82,6 +80,7 @@ h3 {
     font-family: 'Special Elite', cursive;
     color: rgb(255, 255, 255);
     background: tomato;
+    text-align: center;
 }
 
 /* footer */
