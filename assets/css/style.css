@@ -21,8 +21,7 @@ font-family: 'Encode Sans Semi Condensed', sans-serif;
     text-align: center;
 }
 
-.lead, 
-h5, p, h3 {
+.lead {
     text-align: center;
     padding: 0%;
 }
@@ -32,6 +31,9 @@ h5, p, h3 {
 }
 
 /* Gif header */
+#column {
+    padding: 3px;
+}
 #word {  
     font-family: 'Rancho', cursive;
     font-size: 1.4rem;
@@ -56,11 +58,18 @@ h5, p, h3 {
 
 /* Gif Display Area */
 .movie-gif {
-    display: inline-block;
+}
+
+.topic-img, 
+.movie-gif {
+    margin: 3px;
     background: rgba(0, 0, 0, 0.452);
     border: 1px solid black;
-    margin: 3px;
     border-radius: 10%;
+    display: inline-block;
+    padding: 5px;
+    max-width: 920px;
+    text-align: center;
 }
 
 #gifs-view {
@@ -81,15 +90,26 @@ h3 {
     color: white;
     background-repeat: no-repeat;
     margin-top: 5px;
-   
     z-index: -99;
     width: 100%;
 }
 
 /* Media Queries */
+@media only screen and (max-width: 768px) {
+    .topic-img {
+        max-width: 660px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .topic-img {
+        max-width: 500px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .topic-img {
-       max-width: 440px;
+       max-width: 420px;
        height: auto;
     }
 
@@ -104,7 +124,7 @@ h3 {
     }
 
     .topic-img {
-        max-width: 280px;
+        max-width: 260px;
         height: auto;
     }
     
@@ -114,11 +134,5 @@ h3 {
 
     .jumbotron-fluid {
          width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .topic-img {
-        max-width: 680px;
     }
 }
