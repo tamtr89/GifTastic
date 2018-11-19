@@ -15,3 +15,6 @@ With every gif is displayed its rating (PG, G, etc.).
 <li>JavaScript to make the page dynamic</li>
 <li>jQuery for Dom Manipulation</li>
 <li>AJAX for API GET requests</li>
+
+<h4>Demo:</h4>
+https://tamtr89.github.io/GifTastic/
