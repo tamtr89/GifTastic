@@ -1,4 +1,4 @@
-#<h1>Project Tittle: GifTastic
+#<h1>Project Tittle: GifTastic</h1>
 
 Requirements
 The app takes the entered search term topics from a user input box and pushes them into array from which it creates buttons in the HTML. Clicking on a button grabs 10 static, non-animated gif images from the GIPHY API and places them on the page.
