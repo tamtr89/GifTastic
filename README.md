@@ -10,8 +10,8 @@ If the user clicks the gif again, it should stop playing.
 With every gif is displayed its rating (PG, G, etc.).
 
 <h3>Technologies Used</h3>
-HTML
-CSS Bootstrap
-JavaScript to make the page dynamic
-jQuery for Dom Manipulation
-AJAX for API GET requests
+<li>HTML</li>
+<li>CSS Bootstrap</li>
+<li>JavaScript to make the page dynamic</li>
+<li>jQuery for Dom Manipulation</li>
+<li>AJAX for API GET requests</li>
